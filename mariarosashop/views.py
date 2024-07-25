@@ -1,15 +1,9 @@
 from django.shortcuts import render
+from mariarosashop.models import Fotografia
 
 
 def index(request):
-
-    dados = {
-        1: {"nome": "Nebulosa de Carina",
-            "legenda": "webtelescope.org / NASA /James Webb"},
-        2: {"nome": "Galaxia NGC 1079",
-            "legenda": "nada.org / NASA / Hubble"}
-    }
-
+    fotografias = Fotografia.objects.all()
     return render(request, 'mariarosashop/index.html', {"cards": dados})
 
 
