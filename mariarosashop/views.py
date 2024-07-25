@@ -4,7 +4,7 @@ from mariarosashop.models import Fotografia
 
 def index(request):
     fotografias = Fotografia.objects.all()
-    return render(request, 'mariarosashop/index.html', {"cards": dados})
+    return render(request, 'mariarosashop/index.html', {"cards": fotografias})
 
 
 def imagem(request):
